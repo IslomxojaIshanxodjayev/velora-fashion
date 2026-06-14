@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "siteName": "Velora Fashion",
+    "currency": "USD",
+    "period": "2025-02 to 2025-05",
+    "lastUpdated": "2025-05-31"
+  },
+  "dashboard": {
+    "totalRevenue": 924500,
+    "revenueGrowthPercent": 21.3,
+    "totalOrders": 4128,
+    "ordersGrowthPercent": 14.7,
+    "newCustomers": 538,
+    "customersGrowthPercent": 28.4,
+    "deliverySuccessRate": 97.2,
+    "activeProducts": 22400,
+    "totalPartners": 3100,
+    "avgOrderValue": 224
+  },
+  "monthlyRevenue": [
+    { "month": "Fevral", "revenue2025": 198000, "revenue2024": 152000, "orders": 892 },
+    { "month": "Mart",   "revenue2025": 224000, "revenue2024": 178000, "orders": 1010 },
+    { "month": "Aprel",  "revenue2025": 241500, "revenue2024": 195000, "orders": 1087 },
+    { "month": "May",    "revenue2025": 261000, "revenue2024": 210000, "orders": 1139 }
+  ],
+  "weeklyTraffic": [
+    { "day": "Du", "visitors": 412, "orders": 88,  "conversion": 21.4 },
+    { "day": "Se", "visitors": 389, "orders": 76,  "conversion": 19.5 },
+    { "day": "Ch", "visitors": 451, "orders": 97,  "conversion": 21.5 },
+    { "day": "Pa", "visitors": 502, "orders": 118, "conversion": 23.5 },
+    { "day": "Ju", "visitors": 620, "orders": 151, "conversion": 24.4 },
+    { "day": "Sh", "visitors": 710, "orders": 185, "conversion": 26.1 },
+    { "day": "Ya", "visitors": 295, "orders": 54,  "conversion": 18.3 }
+  ],
+  "categories": [
+    { "name": "Ayollar",  "count": 7200, "revenue": 312000, "percent": 33.8, "color": "#f472b6" },
+    { "name": "Erkaklar", "count": 5900, "revenue": 248000, "percent": 26.8, "color": "#60a5fa" },
+    { "name": "Bolalar",  "count": 4100, "revenue": 174000, "percent": 18.8, "color": "#34d399" },
+    { "name": "Sport",    "count": 3200, "revenue": 128000, "percent": 13.9, "color": "#fbbf24" },
+    { "name": "Aksessuar","count": 2000, "revenue":  62500, "percent":  6.7, "color": "#a78bfa" }
+  ],
+  "topProducts": [
+    { "name": "Premium Silk Dress",      "category": "Ayollar",  "sold": 1840, "revenue": 82800 },
+    { "name": "Business Suit Pro",       "category": "Erkaklar", "sold": 1520, "revenue": 91200 },
+    { "name": "Kids Party Collection",   "category": "Bolalar",  "sold": 2100, "revenue": 63000 },
+    { "name": "AeroFlex Sport Set",      "category": "Sport",    "sold": 1380, "revenue": 55200 },
+    { "name": "Luxury Handbag Set",      "category": "Aksessuar","sold":  960, "revenue": 48000 }
+  ],
+  "products": [
+    { "id": "P001", "name": "Premium Silk Evening Dress",   "category": "Ayollar",  "subCategory": "Kechki",  "price": 45.00, "stock": 320, "minOrderQty": 10, "badge": "Hot",  "sku": "AY-SILK-001", "color": "#fce4ec" },
+    { "id": "P002", "name": "Classic Floral Blouse",        "category": "Ayollar",  "subCategory": "Bluzka",  "price": 18.50, "stock": 850, "minOrderQty": 20, "badge": null,  "sku": "AY-BLZ-002",  "color": "#fce4ec" },
+    { "id": "P003", "name": "High-Waist Palazzo Pants",     "category": "Ayollar",  "subCategory": "Shim",    "price": 22.00, "stock": 640, "minOrderQty": 15, "badge": "New",  "sku": "AY-PLZ-003",  "color": "#fce4ec" },
+    { "id": "P004", "name": "Casual Summer Maxi Dress",     "category": "Ayollar",  "subCategory": "Kiyim",   "price": 28.00, "stock": 410, "minOrderQty": 10, "badge": "Hot",  "sku": "AY-MXD-004",  "color": "#fce4ec" },
+    { "id": "P005", "name": "Office Pencil Skirt",          "category": "Ayollar",  "subCategory": "Yubka",   "price": 16.00, "stock": 720, "minOrderQty": 20, "badge": null,  "sku": "AY-SKT-005",  "color": "#fce4ec" },
+    { "id": "P006", "name": "Knitted Cardigan Set",         "category": "Ayollar",  "subCategory": "Kofta",   "price": 32.00, "stock": 290, "minOrderQty": 10, "badge": "New",  "sku": "AY-KRD-006",  "color": "#fce4ec" },
+    { "id": "P007", "name": "Business Slim Fit Suit",       "category": "Erkaklar", "subCategory": "Kostyum", "price": 60.00, "stock": 180, "minOrderQty": 5,  "badge": "Hot",  "sku": "ER-SUT-001",  "color": "#e3f2fd" },
+    { "id": "P008", "name": "Oxford Cotton Shirt",          "category": "Erkaklar", "subCategory": "Ko'ylak", "price": 14.00, "stock": 1200,"minOrderQty": 30, "badge": null,  "sku": "ER-SHT-002",  "color": "#e3f2fd" },
+    { "id": "P009", "name": "Slim Chino Trousers",          "category": "Erkaklar", "subCategory": "Shim",    "price": 19.50, "stock": 880, "minOrderQty": 20, "badge": null,  "sku": "ER-CHN-003",  "color": "#e3f2fd" },
+    { "id": "P010", "name": "Premium Leather Jacket",       "category": "Erkaklar", "subCategory": "Kurtka",  "price": 85.00, "stock": 140, "minOrderQty": 5,  "badge": "Hot",  "sku": "ER-LTH-004",  "color": "#e3f2fd" },
+    { "id": "P011", "name": "Polo Sport T-Shirt 3-Pack",    "category": "Erkaklar", "subCategory": "Futbolka","price": 24.00, "stock": 1500,"minOrderQty": 30, "badge": "New",  "sku": "ER-PLO-005",  "color": "#e3f2fd" },
+    { "id": "P012", "name": "Denim Jeans Regular Fit",      "category": "Erkaklar", "subCategory": "Jins",    "price": 28.00, "stock": 960, "minOrderQty": 20, "badge": null,  "sku": "ER-DNM-006",  "color": "#e3f2fd" },
+    { "id": "P013", "name": "Kids Rainbow Dress Set",       "category": "Bolalar",  "subCategory": "Ko'ylak", "price": 12.00, "stock": 740, "minOrderQty": 20, "badge": "Hot",  "sku": "BO-DRS-001",  "color": "#e8f5e9" },
+    { "id": "P014", "name": "Boys Casual Shirt & Shorts",   "category": "Bolalar",  "subCategory": "Komplekt","price": 9.50,  "stock": 920, "minOrderQty": 24, "badge": null,  "sku": "BO-SET-002",  "color": "#e8f5e9" },
+    { "id": "P015", "name": "Winter Kids Puffer Jacket",    "category": "Bolalar",  "subCategory": "Kurtka",  "price": 18.00, "stock": 420, "minOrderQty": 12, "badge": "New",  "sku": "BO-PUF-003",  "color": "#e8f5e9" },
+    { "id": "P016", "name": "Baby Onesie 5-Pack",           "category": "Bolalar",  "subCategory": "Chaqaloq","price": 8.00,  "stock": 1100,"minOrderQty": 24, "badge": "Hot",  "sku": "BO-ONS-004",  "color": "#e8f5e9" },
+    { "id": "P017", "name": "AeroFlex Running Set",         "category": "Sport",    "subCategory": "Yugurish","price": 38.00, "stock": 560, "minOrderQty": 10, "badge": "Hot",  "sku": "SP-RUN-001",  "color": "#f3e5f5" },
+    { "id": "P018", "name": "Pro Gym Leggings",             "category": "Sport",    "subCategory": "Fitnes",  "price": 22.00, "stock": 800, "minOrderQty": 15, "badge": "New",  "sku": "SP-LEG-002",  "color": "#f3e5f5" },
+    { "id": "P019", "name": "Football Training Kit",        "category": "Sport",    "subCategory": "Futbol",  "price": 30.00, "stock": 380, "minOrderQty": 10, "badge": null,  "sku": "SP-FTB-003",  "color": "#f3e5f5" },
+    { "id": "P020", "name": "Compression Base Layer Set",   "category": "Sport",    "subCategory": "Kompres", "price": 26.00, "stock": 460, "minOrderQty": 12, "badge": null,  "sku": "SP-CMP-004",  "color": "#f3e5f5" },
+    { "id": "P021", "name": "Luxury Tote Bag Leather",      "category": "Aksessuar","subCategory": "Sumka",   "price": 52.00, "stock": 210, "minOrderQty": 5,  "badge": "Hot",  "sku": "AK-TOT-001",  "color": "#fff8e1" },
+    { "id": "P022", "name": "Silk Scarf Premium Set 3pcs",  "category": "Aksessuar","subCategory": "Sharf",   "price": 18.00, "stock": 620, "minOrderQty": 12, "badge": "New",  "sku": "AK-SCF-002",  "color": "#fff8e1" },
+    { "id": "P023", "name": "Classic Leather Belt Pack",    "category": "Aksessuar","subCategory": "Kamar",   "price": 14.00, "stock": 780, "minOrderQty": 20, "badge": null,  "sku": "AK-BLT-003",  "color": "#fff8e1" },
+    { "id": "P024", "name": "Statement Sunglasses Set",     "category": "Aksessuar","subCategory": "Ko'zoynak","price": 9.00, "stock": 940, "minOrderQty": 24, "badge": null,  "sku": "AK-SGL-004",  "color": "#fff8e1" }
+  ],
+  "orders": [
+    { "id": "ORD-2025-0412", "customer": "Tashkent Style LLC",    "company": "Tashkent Style",  "items": [{ "name": "Premium Silk Evening Dress", "qty": 50, "price": 45.00 }],                                         "total": 2250, "status": "Delivered",   "date": "2025-05-28", "city": "Toshkent" },
+    { "id": "ORD-2025-0411", "customer": "Samarkand Fashion Co.", "company": "Samarkand Fashion","items": [{ "name": "Business Slim Fit Suit", "qty": 20, "price": 60.00 }, { "name": "Oxford Cotton Shirt", "qty": 60, "price": 14.00 }], "total": 2040, "status": "InTransit",  "date": "2025-05-26", "city": "Samarqand" },
+    { "id": "ORD-2025-0410", "customer": "Bukhara Retail Group",  "company": "Bukhara Retail",  "items": [{ "name": "Kids Rainbow Dress Set", "qty": 100, "price": 12.00 }],                                            "total": 1200, "status": "Processing",  "date": "2025-05-25", "city": "Buxoro" },
+    { "id": "ORD-2025-0409", "customer": "Fergana Boutique",      "company": "Fergana Boutique","items": [{ "name": "AeroFlex Running Set", "qty": 30, "price": 38.00 }],                                               "total": 1140, "status": "Delivered",   "date": "2025-05-22", "city": "Farg'ona" },
+    { "id": "ORD-2025-0408", "customer": "Andijan Wholesale",     "company": "Andijan Wholesale","items":[{ "name": "Luxury Tote Bag Leather", "qty": 15, "price": 52.00 }, { "name": "Silk Scarf Premium Set", "qty": 36, "price": 18.00 }],"total": 1428, "status": "Shipped",    "date": "2025-05-20", "city": "Andijon" },
+    { "id": "ORD-2025-0407", "customer": "Namangan Style Hub",    "company": "Namangan Style",  "items": [{ "name": "High-Waist Palazzo Pants", "qty": 60, "price": 22.00 }],                                           "total": 1320, "status": "Delivered",   "date": "2025-05-18", "city": "Namangan" },
+    { "id": "ORD-2025-0406", "customer": "Qarshi Textile Co",     "company": "Qarshi Textile",  "items": [{ "name": "Polo Sport T-Shirt 3-Pack", "qty": 90, "price": 24.00 }],                                          "total": 2160, "status": "Delivered",   "date": "2025-05-15", "city": "Qarshi" },
+    { "id": "ORD-2025-0405", "customer": "Nukus Fashion House",   "company": "Nukus Fashion",   "items": [{ "name": "Classic Floral Blouse", "qty": 80, "price": 18.50 }],                                              "total": 1480, "status": "InTransit",  "date": "2025-05-12", "city": "Nukus" },
+    { "id": "ORD-2025-0404", "customer": "Termiz Style Market",   "company": "Termiz Market",   "items": [{ "name": "Denim Jeans Regular Fit", "qty": 60, "price": 28.00 }],                                            "total": 1680, "status": "Delivered",   "date": "2025-05-08", "city": "Termiz" },
+    { "id": "ORD-2025-0403", "customer": "Jizzakh Clothing Co",   "company": "Jizzakh Clothing","items": [{ "name": "Winter Kids Puffer Jacket", "qty": 35, "price": 18.00 }],                                          "total": 630,  "status": "Cancelled",   "date": "2025-05-05", "city": "Jizzax" },
+    { "id": "ORD-2025-0402", "customer": "Gulistan Retail",       "company": "Gulistan Retail", "items": [{ "name": "Pro Gym Leggings", "qty": 45, "price": 22.00 }],                                                   "total": 990,  "status": "Delivered",   "date": "2025-04-28", "city": "Guliston" },
+    { "id": "ORD-2025-0401", "customer": "Chirchiq Fashion",      "company": "Chirchiq Fashion","items": [{ "name": "Baby Onesie 5-Pack", "qty": 120, "price": 8.00 }],                                                 "total": 960,  "status": "Delivered",   "date": "2025-04-22", "city": "Chirchiq" },
+    { "id": "ORD-2025-0312", "customer": "Tashkent Style LLC",    "company": "Tashkent Style",  "items": [{ "name": "Premium Leather Jacket", "qty": 10, "price": 85.00 }],                                             "total": 850,  "status": "Delivered",   "date": "2025-04-15", "city": "Toshkent" },
+    { "id": "ORD-2025-0311", "customer": "Samarkand Fashion Co.", "company": "Samarkand Fashion","items":[{ "name": "Office Pencil Skirt", "qty": 60, "price": 16.00 }],                                                 "total": 960,  "status": "Delivered",   "date": "2025-04-10", "city": "Samarqand" },
+    { "id": "ORD-2025-0310", "customer": "Fergana Boutique",      "company": "Fergana Boutique","items": [{ "name": "Knitted Cardigan Set", "qty": 20, "price": 32.00 }],                                               "total": 640,  "status": "Delivered",   "date": "2025-03-28", "city": "Farg'ona" },
+    { "id": "ORD-2025-0309", "customer": "Bukhara Retail Group",  "company": "Bukhara Retail",  "items": [{ "name": "Statement Sunglasses Set", "qty": 96, "price": 9.00 }],                                            "total": 864,  "status": "Delivered",   "date": "2025-03-20", "city": "Buxoro" },
+    { "id": "ORD-2025-0308", "customer": "Andijan Wholesale",     "company": "Andijan Wholesale","items":[{ "name": "Compression Base Layer Set", "qty": 48, "price": 26.00 }],                                         "total": 1248, "status": "Delivered",   "date": "2025-03-15", "city": "Andijon" },
+    { "id": "ORD-2025-0307", "customer": "Namangan Style Hub",    "company": "Namangan Style",  "items": [{ "name": "Classic Leather Belt Pack", "qty": 80, "price": 14.00 }],                                          "total": 1120, "status": "Delivered",   "date": "2025-03-08", "city": "Namangan" },
+    { "id": "ORD-2025-0210", "customer": "Tashkent Style LLC",    "company": "Tashkent Style",  "items": [{ "name": "Casual Summer Maxi Dress", "qty": 40, "price": 28.00 }],                                           "total": 1120, "status": "Delivered",   "date": "2025-02-25", "city": "Toshkent" },
+    { "id": "ORD-2025-0209", "customer": "Samarkand Fashion Co.", "company": "Samarkand Fashion","items":[{ "name": "Boys Casual Shirt & Shorts", "qty": 72, "price": 9.50 }],                                          "total": 684,  "status": "Delivered",   "date": "2025-02-18", "city": "Samarqand" }
+  ],
+  "partners": [
+    { "name": "Tashkent Style LLC",    "city": "Toshkent",   "orders": 48, "totalSpent": 112000, "tier": "Platinum", "since": "2022-01" },
+    { "name": "Samarkand Fashion Co.", "city": "Samarqand",  "orders": 36, "totalSpent": 87000,  "tier": "Gold",     "since": "2022-06" },
+    { "name": "Fergana Boutique",      "city": "Farg'ona",   "orders": 28, "totalSpent": 64000,  "tier": "Gold",     "since": "2023-02" },
+    { "name": "Bukhara Retail Group",  "city": "Buxoro",     "orders": 22, "totalSpent": 48500,  "tier": "Silver",   "since": "2023-05" },
+    { "name": "Andijan Wholesale",     "city": "Andijon",    "orders": 19, "totalSpent": 42000,  "tier": "Silver",   "since": "2023-08" }
+  ]
+}

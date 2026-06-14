@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velora Fashion — B2B Ulgurji Platforma</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+  <script src="js/charts.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/crm.js" defer></script>
+</head>
+<body>
+
+<!-- ══════════════════════ TOPBAR ══════════════════════ -->
+<div class="topbar">
+  <div class="topbar-left">
+    <span>📞 <b>+998 71 200 00 00</b></span>
+    <span>✉️ <b>partners@velora.uz</b></span>
+    <span>🕐 Du–Ju: 09:00–18:00</span>
+  </div>
+  <div class="topbar-right">
+    <div class="live-badge"><div class="live-dot"></div>Tizim faol</div>
+  </div>
+</div>
+
+<!-- ══════════════════════ NAVBAR ══════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <div class="nav-logo-mark"><span>V</span></div>
+      Velora<em>Fashion</em>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#hero"     data-sec="hero">Bosh sahifa</a>
+      <a href="#stats"    data-sec="stats">Dashboard</a>
+      <a href="#products" data-sec="products">Katalog</a>
+      <a href="#orders"   data-sec="orders">Buyurtmalar</a>
+      <a href="#partners" data-sec="partners">Hamkorlar</a>
+      <a href="#contact"  data-sec="contact">Aloqa</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="btn-ghost" id="loginBtn">Kirish</button>
+      <button class="btn-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+        🤝 Hamkor bo'lish
+      </button>
+    </div>
+    <button class="nav-toggle" id="navToggle">☰</button>
+  </div>
+</nav>
+
+<!-- ══════════════════════ HERO ══════════════════════ -->
+<section id="hero" class="hero">
+  <div class="hero-grid">
+
+    <!-- Left: text -->
+    <div class="hero-content">
+      <div class="hero-tag">🌿 B2B Ulgurji · O'zbekiston №1</div>
+      <h1>
+        O'zbekistonning <span class="highlight">yetakchi</span><br>
+        kiyim-kechak <span class="highlight2">ulgurji</span><br>
+        platformasi
+      </h1>
+      <p class="hero-desc">
+        22,000+ mahsulot SKU, 3,100+ hamkor korxona va to'rt oylik o'sish ko'rsatkichlari
+        bilan O'zbekiston moda bozorining asosiy ta'minotchisi.
+      </p>
+      <div class="hero-btns">
+        <button class="btn-hero-primary" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+          📦 Katalogni ko'rish
+        </button>
+        <button class="btn-hero-outline" onclick="document.getElementById('stats').scrollIntoView({behavior:'smooth'})">
+          📊 Statistika
+        </button>
+      </div>
+    </div>
+
+    <!-- Right: floating cards -->
+    <div class="hero-right">
+      <div class="hero-mockup">
+        <div class="hm-card">
+          <div class="hmc-label">Oylik daromad</div>
+          <div class="hmc-val">$261K</div>
+          <div class="hmc-sub up">↑ +21.3% o'sdi</div>
+        </div>
+        <div class="hm-card">
+          <div class="hmc-label">Yetkazib berish</div>
+          <div class="hmc-val">97.2%</div>
+          <div class="hmc-sub up">✓ Muvaffaqiyat</div>
+        </div>
+        <div class="hm-card">
+          <div class="hmc-label">Yangi hamkorlar</div>
+          <div class="hmc-val">+538</div>
+          <div class="hmc-sub gold">↑ +28.4%</div>
+        </div>
+        <div class="hm-card">
+          <div class="hmc-label">Aktiv buyurtma</div>
+          <div class="hmc-val">4,128</div>
+          <div class="hmc-sub up">Feb–May 2025</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero counters -->
+  <div class="hero-counters">
+    <div class="hero-counter">
+      <div class="hc-val" id="heroOrders">—</div>
+      <div class="hc-lbl">Jami buyurtma</div>
+    </div>
+    <div class="hero-counter">
+      <div class="hc-val" id="heroPartners">—</div>
+      <div class="hc-lbl">Faol hamkorlar</div>
+    </div>
+    <div class="hero-counter">
+      <div class="hc-val" id="heroUptime">—</div>
+      <div class="hc-lbl">Tizim ishlash vaqti</div>
+    </div>
+    <div class="hero-counter">
+      <div class="hc-val" id="heroProducts">—</div>
+      <div class="hc-lbl">Mahsulot SKU</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ FEATURES ══════════════════════ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="features-strip">
+      <div class="feature-item">
+        <div class="fi-icon">🚀</div>
+        <div class="fi-title">Tezkor yetkazib berish</div>
+        <div class="fi-desc">Toshkent shahri bo'ylab 24 soat, respublika bo'yicha 48–72 soat ichida</div>
+      </div>
+      <div class="feature-item">
+        <div class="fi-icon">💎</div>
+        <div class="fi-title">Premium sifat kafolati</div>
+        <div class="fi-desc">ISO 9001:2015 sertifikatlangan omborxona va sifat nazorat tizimi</div>
+      </div>
+      <div class="feature-item">
+        <div class="fi-icon">🤝</div>
+        <div class="fi-title">Hamkorlik dasturi</div>
+        <div class="fi-desc">Silver, Gold va Platinum darajalarda maxsus chegirmalar va imtiyozlar</div>
+      </div>
+      <div class="feature-item">
+        <div class="fi-icon">📱</div>
+        <div class="fi-title">Raqamli boshqaruv</div>
+        <div class="fi-desc">Buyurtmalaringizni real vaqtda kuzatib boring, hisobotlarni yuklab oling</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ DASHBOARD ══════════════════════ -->
+<section id="stats" class="section section-cream2">
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-eyebrow">Feb – May 2025</span>
+      <h2>Biznes <em>ko'rsatkichlari</em></h2>
+      <p>To'rt oylik real vaqt statistikasi va o'sish tahlili</p>
+    </div>
+
+    <!-- Metric cards -->
+    <div class="metrics-grid">
+      <div class="metric-card mc-green loading">
+        <div class="mc-top">
+          <div class="mc-icon green">💰</div>
+          <span class="mc-trend up" id="mRevenueTrend">—</span>
+        </div>
+        <div class="mc-label">Jami daromad</div>
+        <div class="mc-value" id="mRevenueVal">—</div>
+        <div class="mc-sub">Feb–May 2025</div>
+      </div>
+      <div class="metric-card mc-blue loading">
+        <div class="mc-top">
+          <div class="mc-icon blue">📦</div>
+          <span class="mc-trend up" id="mOrdersTrend">—</span>
+        </div>
+        <div class="mc-label">Jami buyurtmalar</div>
+        <div class="mc-value" id="mOrdersVal">—</div>
+        <div class="mc-sub">4 oy davomida</div>
+      </div>
+      <div class="metric-card mc-gold loading">
+        <div class="mc-top">
+          <div class="mc-icon gold">👥</div>
+          <span class="mc-trend up" id="mCustomersTrend">—</span>
+        </div>
+        <div class="mc-label">Yangi hamkorlar</div>
+        <div class="mc-value" id="mCustomersVal">—</div>
+        <div class="mc-sub">Ro'yxatdan o'tgan</div>
+      </div>
+      <div class="metric-card mc-rose loading">
+        <div class="mc-top">
+          <div class="mc-icon rose">🚚</div>
+          <span class="mc-trend up" id="mDeliveryTrend">—</span>
+        </div>
+        <div class="mc-label">Yetkazib berish</div>
+        <div class="mc-value" id="mDeliveryVal">—</div>
+        <div class="mc-sub">Muvaffaqiyat foizi</div>
+      </div>
+    </div>
+
+    <!-- Charts row 1 -->
+    <div class="charts-grid">
+      <div class="chart-card">
+        <div class="chart-header">
+          <div>
+            <div class="chart-title">Oylik daromad taqqoslama</div>
+            <div class="chart-subtitle">2025 vs 2024 yillar</div>
+          </div>
+          <div class="chart-legend">
+            <div class="legend-item"><div class="legend-dot" style="background:#2dd4a0"></div>2025</div>
+            <div class="legend-item"><div class="legend-dot" style="background:rgba(10,74,58,0.25)"></div>2024</div>
+          </div>
+        </div>
+        <div class="chart-canvas"><canvas id="revenueChart"></canvas></div>
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-header">
+          <div>
+            <div class="chart-title">Kategoriyalar ulushi</div>
+            <div class="chart-subtitle">Daromad bo'yicha</div>
+          </div>
+        </div>
+        <div class="chart-canvas-sm"><canvas id="categoryChart"></canvas></div>
+        <div class="cat-list" id="categoryList"></div>
+      </div>
+    </div>
+
+    <!-- Charts row 2 -->
+    <div class="charts-row2">
+      <div class="chart-card">
+        <div class="chart-header">
+          <div>
+            <div class="chart-title">Haftalik trafik</div>
+            <div class="chart-subtitle">Tashrif va buyurtmalar</div>
+          </div>
+          <div class="chart-legend">
+            <div class="legend-item"><div class="legend-dot" style="background:#2dd4a0"></div>Tashrif</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#d4a843"></div>Buyurtma</div>
+          </div>
+        </div>
+        <div class="chart-canvas"><canvas id="trafficChart"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-header">
+          <div>
+            <div class="chart-title">Konversiya darajasi</div>
+            <div class="chart-subtitle">Hafta kunlari bo'yicha %</div>
+          </div>
+        </div>
+        <div class="chart-canvas"><canvas id="conversionChart"></canvas></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ PRODUCTS ══════════════════════ -->
+<section id="products" class="section section-alt">
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-eyebrow">22,400+ mahsulot</span>
+      <h2>Mahsulot <em>katalogi</em></h2>
+      <p>Barcha yetakchi brendlar va kategoriyalar, ulgurji narxlarda</p>
+    </div>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" data-cat="all">Barchasi</button>
+      <button class="filter-btn" data-cat="Ayollar">👗 Ayollar</button>
+      <button class="filter-btn" data-cat="Erkaklar">👔 Erkaklar</button>
+      <button class="filter-btn" data-cat="Bolalar">🧒 Bolalar</button>
+      <button class="filter-btn" data-cat="Sport">⚽ Sport</button>
+      <button class="filter-btn" data-cat="Aksessuar">👜 Aksessuar</button>
+    </div>
+
+    <div class="products-grid" id="productsGrid">
+      <!-- JS tomonidan to'ldiriladi -->
+    </div>
+
+    <div class="load-more-wrap">
+      <button class="btn-load-more" id="loadMoreBtn" style="display:none">Ko'proq ko'rish ↓</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ ORDERS ══════════════════════ -->
+<section id="orders" class="section section-cream2">
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-eyebrow">So'nggi buyurtmalar</span>
+      <h2>Buyurtmalar <em>tarixi</em></h2>
+      <p>Feb–May 2025 davridagi barcha buyurtmalar holati</p>
+    </div>
+
+    <div class="table-card">
+      <div class="table-header">
+        <span class="table-title">Buyurtmalar ro'yxati</span>
+        <span class="table-meta" id="ordersCount">—</span>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="orders-table">
+          <thead>
+            <tr>
+              <th>Buyurtma №</th>
+              <th>Kompaniya</th>
+              <th>Mahsulot</th>
+              <th>Summa</th>
+              <th>Holat</th>
+              <th>Sana</th>
+            </tr>
+          </thead>
+          <tbody id="ordersBody">
+            <!-- JS tomonidan to'ldiriladi -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ PARTNERS ══════════════════════ -->
+<section id="partners" class="section section-alt">
+  <div class="container">
+    <div class="sec-header center">
+      <span class="sec-eyebrow">Top hamkorlar</span>
+      <h2>Bizning <em>hamkorlarimiz</em></h2>
+      <p>Respublika bo'ylab 3,100+ ishonchli B2B hamkor korxona</p>
+    </div>
+    <div class="partners-grid" id="partnersGrid">
+      <!-- JS tomonidan to'ldiriladi -->
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ CONTACT ══════════════════════ -->
+<section id="contact" class="section section-cream2">
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-eyebrow">Biz bilan bog'laning</span>
+      <h2>Hamkorlikni <em>boshlang</em></h2>
+    </div>
+    <div class="contact-wrapper">
+
+      <!-- Info -->
+      <div class="contact-info">
+        <h3>Velora Fashion bilan ishlang</h3>
+        <p>
+          O'zbekistonning barcha viloyatlariga yetkazib berish, minimal buyurtma miqdori va
+          maxsus hamkorlik shartlari mavjud. Bugun ariza qoldiring va menejerimiz
+          24 soat ichida siz bilan bog'lanadi.
+        </p>
+        <div class="contact-items">
+          <div class="ci-item">
+            <div class="ci-icon">📍</div>
+            <div>
+              <div class="ci-label">Manzil</div>
+              <div class="ci-val">Toshkent sh., Yunusobod t., Amir Temur ko'chasi 108</div>
+            </div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon">📞</div>
+            <div>
+              <div class="ci-label">Telefon</div>
+              <div class="ci-val">+998 71 200 00 00 · +998 90 123 45 67</div>
+            </div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon">✉️</div>
+            <div>
+              <div class="ci-label">Email</div>
+              <div class="ci-val">partners@velora.uz · info@velora.uz</div>
+            </div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon">🕐</div>
+            <div>
+              <div class="ci-label">Ish vaqti</div>
+              <div class="ci-val">Dushanba – Juma: 09:00 – 18:00</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="contact-form-card">
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Ismingiz</label>
+              <input type="text" placeholder="Abdullayev Jasur" required />
+            </div>
+            <div class="form-group">
+              <label>Kompaniya</label>
+              <input type="text" placeholder="Kompaniya nomi" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Telefon</label>
+              <input type="tel" placeholder="+998 90 123 45 67" required />
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="email@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Qiziqish yo'nalishi</label>
+            <select>
+              <option>Ayollar kiyimi</option>
+              <option>Erkaklar kiyimi</option>
+              <option>Bolalar kiyimi</option>
+              <option>Sport kiyimi</option>
+              <option>Aksessuarlar</option>
+              <option>Barcha kategoriyalar</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Xabar</label>
+            <textarea placeholder="Qo'shimcha ma'lumot, buyurtma hajmi, yetkazib berish hududini yozing..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit">🤝 Hamkorlik arizasini yuborish</button>
+        </form>
+        <div class="form-success" id="formSuccess">
+          <div class="form-success-icon">🎉</div>
+          <h4>Arizangiz qabul qilindi!</h4>
+          <p>Menejerimiz 24 soat ichida siz bilan bog'lanadi. Rahmat!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ FOOTER ══════════════════════ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-name">🌿 VeloraFashion</div>
+      <div class="footer-brand-desc">
+        O'zbekistonning yetakchi B2B kiyim-kechak ulgurji platformasi.
+        Sifat, ishonch va hamkorlik — bizning qadriyatlarimiz.
+      </div>
+      <div class="footer-socials">
+        <div class="footer-social">📘</div>
+        <div class="footer-social">📸</div>
+        <div class="footer-social">💬</div>
+        <div class="footer-social">▶️</div>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Katalog</h4>
+      <ul>
+        <li><a href="#">Ayollar kiyimi</a></li>
+        <li><a href="#">Erkaklar kiyimi</a></li>
+        <li><a href="#">Bolalar kiyimi</a></li>
+        <li><a href="#">Sport kiyimi</a></li>
+        <li><a href="#">Aksessuarlar</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Kompaniya</h4>
+      <ul>
+        <li><a href="#">Biz haqimizda</a></li>
+        <li><a href="#">Hamkorlik</a></li>
+        <li><a href="#">Yangiliklar</a></li>
+        <li><a href="#">Karyera</a></li>
+        <li><a href="#">Bog'lanish</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Yordam</h4>
+      <ul>
+        <li><a href="#">Yetkazib berish</a></li>
+        <li><a href="#">To'lov shartlari</a></li>
+        <li><a href="#">Qaytarish siyosati</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Texnik yordam</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Velora Fashion. Barcha huquqlar himoyalangan.</span>
+    <div class="footer-bottom-right">
+      <a href="#">Maxfiylik siyosati</a>
+      <a href="#">Foydalanish shartlari</a>
+      <a href="#">Sitemap</a>
+    </div>
+  </div>
+</footer>
+
+
+
+</body>
+</html>
