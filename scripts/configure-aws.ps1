@@ -1,8 +1,8 @@
 # AWS CLI Configuration Script for Windows PowerShell
 
-Write-Host "=========================================="
+Write-Host "==========================================" 
 Write-Host "AWS CLI Configuration" -ForegroundColor Green
-Write-Host "=========================================="
+Write-Host "==========================================" 
 Write-Host ""
 Write-Host "This script will guide you through configuring AWS CLI."
 Write-Host "You'll need your AWS credentials from the AWS Console."
@@ -90,13 +90,13 @@ Write-Host ""
 Write-Host "Verifying configuration..." -ForegroundColor Yellow
 try {
     $identity = aws sts get-caller-identity | ConvertFrom-Json
-    Write-Host "✓ AWS CLI is properly configured!" -ForegroundColor Green
+    Write-Host "Correct AWS CLI is properly configured!" -ForegroundColor Green
     Write-Host ""
     Write-Host "Account ID: $($identity.Account)"
     Write-Host "User ARN: $($identity.Arn)"
     Write-Host "User ID: $($identity.UserId)"
 } catch {
-    Write-Host "✗ AWS CLI configuration verification failed!" -ForegroundColor Red
+    Write-Host "X AWS CLI configuration verification failed!" -ForegroundColor Red
     Write-Host "Please check your credentials and try again."
     exit 1
 }

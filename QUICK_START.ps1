@@ -1,17 +1,17 @@
 # Quick Start Guide for Windows
 
-Write-Host "=========================================="
+Write-Host "==========================================" 
 Write-Host "Velora Fashion - Quick Start Setup" -ForegroundColor Green
-Write-Host "=========================================="
+Write-Host "==========================================" 
 Write-Host ""
 
 # Step 1: Verify AWS CLI
 Write-Host "Step 1: Verifying AWS CLI..." -ForegroundColor Cyan
 try {
     $awsVersion = aws --version
-    Write-Host "✓ AWS CLI installed: $awsVersion" -ForegroundColor Green
+    Write-Host "AWS CLI installed: $awsVersion" -ForegroundColor Green
 } catch {
-    Write-Host "✗ AWS CLI not found. Download from: https://awscli.amazonaws.com/AWSCLIV2.msi" -ForegroundColor Red
+    Write-Host "AWS CLI not found. Download from: https://awscli.amazonaws.com/AWSCLIV2.msi" -ForegroundColor Red
     exit 1
 }
 
@@ -20,9 +20,9 @@ Write-Host ""
 Write-Host "Step 2: Verifying GitHub CLI..." -ForegroundColor Cyan
 try {
     $ghVersion = gh --version
-    Write-Host "✓ GitHub CLI installed: $ghVersion" -ForegroundColor Green
+    Write-Host "GitHub CLI installed: $ghVersion" -ForegroundColor Green
 } catch {
-    Write-Host "✗ GitHub CLI not found. Download from: https://github.com/cli/cli/releases" -ForegroundColor Red
+    Write-Host "GitHub CLI not found. Download from: https://github.com/cli/cli/releases" -ForegroundColor Red
     exit 1
 }
 
@@ -31,9 +31,9 @@ Write-Host ""
 Write-Host "Step 3: Verifying Docker..." -ForegroundColor Cyan
 try {
     $dockerVersion = docker --version
-    Write-Host "✓ Docker installed: $dockerVersion" -ForegroundColor Green
+    Write-Host "Docker installed: $dockerVersion" -ForegroundColor Green
 } catch {
-    Write-Host "✗ Docker not found. Download from: https://www.docker.com/products/docker-desktop" -ForegroundColor Red
+    Write-Host "Docker not found. Download from: https://www.docker.com/products/docker-desktop" -ForegroundColor Red
     exit 1
 }
 
@@ -51,7 +51,7 @@ Write-Host "Step 5: GitHub Authentication..." -ForegroundColor Cyan
 try {
     $ghStatus = gh auth status 2>&1
     if ($LASTEXITCODE -eq 0) {
-        Write-Host "✓ Already authenticated with GitHub" -ForegroundColor Green
+        Write-Host "Already authenticated with GitHub" -ForegroundColor Green
     }
 } catch {
     Write-Host "Authenticating with GitHub..." -ForegroundColor Yellow
@@ -63,7 +63,7 @@ Write-Host ""
 Write-Host "Step 6: Adding GitHub Secrets..." -ForegroundColor Cyan
 Write-Host ""
 Write-Host "You need to add your EC2 SSH key to GitHub Secrets."
-Write-Host "Path: Settings → Secrets and variables → Actions → New repository secret"
+Write-Host "Path: Settings - Secrets and variables - Actions - New repository secret"
 Write-Host ""
 $sshKeyPath = Read-Host "Enter path to your EC2 private key (e.g., C:\Users\user\.ssh\id_rsa.pem) [or press Enter to skip]"
 
@@ -71,11 +71,11 @@ if (-not [string]::IsNullOrWhiteSpace($sshKeyPath) -and (Test-Path $sshKeyPath))
     try {
         $keyContent = Get-Content $sshKeyPath -Raw
         Write-Host "Setting EC2_SSH_KEY secret..."
-        # Use echo to pipe the key content to gh secret set
+        # Use pipe to gh secret set
         $keyContent | gh secret set EC2_SSH_KEY
-        Write-Host "✓ EC2_SSH_KEY secret added" -ForegroundColor Green
+        Write-Host "EC2_SSH_KEY secret added" -ForegroundColor Green
     } catch {
-        Write-Host "✗ Failed to set secret. You can do this manually in GitHub UI." -ForegroundColor Yellow
+        Write-Host "Failed to set secret. You can do this manually in GitHub UI." -ForegroundColor Yellow
     }
 } else {
     Write-Host "Skipping SSH key setup. You can add it manually in GitHub:" -ForegroundColor Yellow
@@ -84,9 +84,9 @@ if (-not [string]::IsNullOrWhiteSpace($sshKeyPath) -and (Test-Path $sshKeyPath))
 
 # Summary
 Write-Host ""
-Write-Host "=========================================="
+Write-Host "==========================================" 
 Write-Host "Setup Complete!" -ForegroundColor Green
-Write-Host "=========================================="
+Write-Host "==========================================" 
 Write-Host ""
 Write-Host "Next Steps:" -ForegroundColor Cyan
 Write-Host "1. Review DEPLOYMENT_GUIDE.md for detailed instructions"
