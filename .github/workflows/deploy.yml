@@ -34,14 +34,24 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
 
+    - name: Set Docker image name
+      id: docker-image
+      run: |
+        IMAGE_NAME="${{ github.repository }}"
+        echo "image=${DOCKER_REGISTRY}/${IMAGE_NAME,,}:latest" >> $GITHUB_OUTPUT
+        echo "image-sha=${DOCKER_REGISTRY}/${IMAGE_NAME,,}:${{ github.sha }}" >> $GITHUB_OUTPUT
+      shell: bash
+      env:
+        DOCKER_REGISTRY: ${{ env.DOCKER_REGISTRY }}
+
     - name: Build and push Docker image
       uses: docker/build-push-action@v5
       with:
         context: .
         push: true
         tags: |
-          ${{ env.DOCKER_REGISTRY }}/${{ format('{0}', github.repository) | lower }}:latest
-          ${{ env.DOCKER_REGISTRY }}/${{ format('{0}', github.repository) | lower }}:${{ github.sha }}
+          ${{ steps.docker-image.outputs.image }}
+          ${{ steps.docker-image.outputs.image-sha }}
         cache-from: type=gha
         cache-to: type=gha,mode=max
 
@@ -49,7 +59,7 @@ jobs:
       env:
         EC2_USER: ubuntu
         EC2_SSH_KEY: ${{ secrets.EC2_SSH_KEY }}
-        DOCKER_IMAGE: ${{ env.DOCKER_REGISTRY }}/${{ format('{0}', github.repository) | lower }}:latest
+        DOCKER_IMAGE: ${{ steps.docker-image.outputs.image }}
       run: |
         # Create temporary SSH key file
         mkdir -p ~/.ssh
