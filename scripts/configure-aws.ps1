@@ -1,5 +1,8 @@
 # AWS CLI Configuration Script for Windows PowerShell
 
+# Refresh PATH to include newly installed AWS CLI
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
+
 Write-Host "==========================================" 
 Write-Host "AWS CLI Configuration" -ForegroundColor Green
 Write-Host "==========================================" 
