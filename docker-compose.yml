@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  velora-fashion:
+    build: .
+    container_name: velora-fashion
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./:/app:ro
+    networks:
+      - velora-network
+
+networks:
+  velora-network:
+    driver: bridge
