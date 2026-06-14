@@ -40,8 +40,8 @@ jobs:
         context: .
         push: true
         tags: |
-          ${{ env.DOCKER_REGISTRY }}/${{ github.repository }}:latest
-          ${{ env.DOCKER_REGISTRY }}/${{ github.repository }}:${{ github.sha }}
+          ${{ env.DOCKER_REGISTRY }}/${{ format('{0}', github.repository) | lower }}:latest
+          ${{ env.DOCKER_REGISTRY }}/${{ format('{0}', github.repository) | lower }}:${{ github.sha }}
         cache-from: type=gha
         cache-to: type=gha,mode=max
 
@@ -49,7 +49,7 @@ jobs:
       env:
         EC2_USER: ubuntu
         EC2_SSH_KEY: ${{ secrets.EC2_SSH_KEY }}
-        DOCKER_IMAGE: ${{ env.DOCKER_REGISTRY }}/${{ github.repository }}:latest
+        DOCKER_IMAGE: ${{ env.DOCKER_REGISTRY }}/${{ format('{0}', github.repository) | lower }}:latest
       run: |
         # Create temporary SSH key file
         mkdir -p ~/.ssh
